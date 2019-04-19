@@ -1,0 +1,19 @@
+<% include ./partials/header%>
+    <div class="ui main text container segment">
+        <div class="ui huge header"><%= product.name%></div>
+        <div class="top attached segment">
+            <img class="ui centered rounded image" src="<%= product.image%>">
+        <div class="content">
+            <span><%=product.price%></span>
+        </div>
+        <div class="description">
+            <p><%-product.details%></p>
+        </div>
+        <a href="/products/<%=product._id%>/edit" class="ui red basic button">Edit</a>
+        <form id="delete" action="/products/<%=product._id%>?_method=DELETE" method="POST">
+            <button class="ui red basic button">Delete</button>
+        </form>
+        </div>
+        
+    </div>
+<% include ./partials/footer%> 

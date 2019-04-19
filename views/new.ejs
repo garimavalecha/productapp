@@ -1,0 +1,25 @@
+<% include ./partials/header%>
+<div class="ui main text container segment">
+    <div class="ui huge header">New Product</div>
+    <form class="ui form" action="/products" method="POST">
+        <div class="field">
+            <label>Product Name</label>
+            <input type="text" name="product[name]" placeholder="name">
+        </div>
+        <div class="field">
+            <label>Product Image</label>
+            <input type="text" name="product[image]" placeholder="image">
+        </div>
+        <div class="field">
+            <label>Product Price</label>
+            <input type="text" name="product[price]" placeholder="price">
+        </div>
+        <div class="field">
+            <label>Product Details</label>
+            <textarea name="product[details]"></textarea>
+        </div>
+        <input class="ui inverted blue button big" type="submit">
+
+     </form>
+</div>
+<% include ./partials/footer%> 

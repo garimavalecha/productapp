@@ -1,0 +1,21 @@
+<% include ./partials/header%>
+<div class="ui main text container">
+    <div class="ui huge header">Product App</div>
+        <div class="ui divided items">
+            <%products.forEach(function(product){%>
+                <div class="image">
+                    <img src="<%= product.image%>">
+                </div>
+                <div class="content">
+                    <a class="header" href="/products/<%=product._id%>"><%= product.name%></a>
+                    <div class="meta">
+                        <span><%=product.price%></span>
+                    </div>
+                    <div class="extra">
+                        <a class="ui floated violet basic button" href="/products/<%=product._id%>">More Details<i class="right chevron icon"></i></a>        
+                    </div>
+                </div>
+        </div>
+<%})%>
+</div>
+<% include ./partials/footer%> 
